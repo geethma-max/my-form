@@ -59,7 +59,13 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            // Here, you can send data to a server or service
+            // Validate inputs (optional)
+            if (name === '' || email === '' || message === '') {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Mock submission process (you can replace this with actual server logic)
             document.getElementById('response').innerHTML = `
                 <h2>Thank you, ${name}!</h2>
                 <p>Your message has been received.</p>
